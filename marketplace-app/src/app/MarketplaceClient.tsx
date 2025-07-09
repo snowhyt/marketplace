@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { supabase } from "@/lib/supabase";
 import { Input } from "@/components/ui/input";
 import { JSX } from "react";
-import { Button } from '@/components/ui/button'
+
 import {
   Car, Home, Shirt, Smartphone, Gamepad2, Leaf, PawPrint, PackageSearch, Store,
 } from "lucide-react";
