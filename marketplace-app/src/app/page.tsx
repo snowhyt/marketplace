@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const categories = [
-  "Vehicles", "Property Rentals", "Apparel", "Classifieds", "Electronics", "Entertainment",
+  "Vehicles", "Property Rentals", "Apparel", "Electronics", "Entertainment",
   "Home Goods", "Toys & Games", "Free Stuff"
 ];
 
@@ -112,9 +112,9 @@ export default function MarketplacePage() {
           {filtered.map((post) => (
             <Link href={`/item/${post.id}`} key={post.id}>
               <Card className="hover:shadow-md cursor-pointer">
-                <img src={post.image_url || "image-placeholder.jpg"} className="h-32 w-full object-cover rounded-t-md" />
+                <img src={post.image_url || "image-placeholder.jpg"} className="h-40 w-full object-cover rounded-t-md" />
                 <CardContent className="p-2 space-y-1 text-sm">
-                  <div className="font-semibold">{post.price}</div>
+                  <div className="font-semibold text-lg">P{post.price}.00</div>
                   <div>{post.title}</div>
                   <div className="text-gray-500">{post.location || post.category}</div>
                 </CardContent>
