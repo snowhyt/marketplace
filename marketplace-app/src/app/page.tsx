@@ -8,6 +8,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { supabase } from "@/lib/supabase";
 import { Input } from "@/components/ui/input";
 import { JSX } from "react";
+import NavigationBar from "@/components/navbar";
+import{Button} from '@/components/ui/button'
 import {
   Car,
   Home,
@@ -24,6 +26,7 @@ const categories = [
   "Vehicles", "Property Rentals", "Apparel", "Electronics", "Entertainment",
   "Home Goods", "Toys & Games", "Free Stuff"
 ];
+
 
 const categoryIcons: Record<string, JSX.Element> = {
   Vehicles: <Car size={16} />, "Property Rentals": <Home size={16} />, Apparel: <Shirt size={16} />,
@@ -71,16 +74,14 @@ export default function MarketplacePage() {
   });
 
   return (
+    <>
+    <NavigationBar/>
     <main className="p-4 grid grid-cols-[220px_1fr] gap-4">
       {/* Sidebar */}
       <aside className="space-y-4">
-        <div className="flex items-centers gap-4">
-          <div className="bg-blue-500 text-white font-bold w-6 h-6 rounded-full flex items-center justify-center">F</div>
-          <h1 className="text-xl font-bold">Marketplace</h1>
-        </div>
 
         <div>
-          <h2 className="text-md font-semibold mb-10">Categories</h2>
+          <h2 className="text-lg font-semibold mb-5">Categories</h2>
           <ul className=" flex flex-col space-y-1 gap-y-5">
             {categories.map((cat, i) => (
               <li
@@ -100,6 +101,8 @@ export default function MarketplacePage() {
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold">Today's picks</h2>
+ 
+
           <Input
             placeholder="Search listings..."
             value={search}
@@ -124,5 +127,6 @@ export default function MarketplacePage() {
         </div>
       </section>
     </main>
+    </>
   );
 }
