@@ -5,8 +5,10 @@ import MarketplacePage from "@/components/MarketplacePage";
 
 export default function Home() {
   return (
-    <Suspense>
+    <>
+    <Suspense fallback={<div className="p-4">Loading listings...</div>}>
       <MarketplacePage />
     </Suspense>
+    </>
   );
 }
