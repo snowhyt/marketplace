@@ -1,14 +1,13 @@
-import { Suspense } from "react";
-import MarketplaceClient from "./MarketplaceClient";
-import NavigationBar from "@/components/navbar";
 
-export default function Page() {
+"use client";
+
+import { Suspense } from "react";
+import MarketplacePage from "@/components/MarketplacePage";
+
+export default function Home() {
   return (
-    <>
-      <NavigationBar />
-      <Suspense fallback={<div className="p-6">Loading...</div>}>
-        <MarketplaceClient />
-      </Suspense>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <MarketplacePage />
+    </Suspense>
   );
 }
