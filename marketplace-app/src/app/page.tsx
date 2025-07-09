@@ -6,7 +6,7 @@ import MarketplacePage from "@/components/MarketplacePage";
 
 export default function Home() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <MarketplacePage />
     </Suspense>
   );
