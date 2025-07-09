@@ -11,6 +11,7 @@ import {
   Car, Home, Shirt, Smartphone, Gamepad2,
   Leaf, PawPrint, PackageSearch, Store
 } from "lucide-react";
+import NavigationBar from "@/components/navbar";
 
 const categories = [
   "Vehicles", "Property Rentals", "Apparel", "Electronics", "Entertainment",
